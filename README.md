@@ -11,3 +11,5 @@ yarn dev
 # or
 pnpm dev
 ```
+
+https://github.com/muffinweb/ChatAI/raw/main/guides/sample.mov
