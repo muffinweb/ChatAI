@@ -12,8 +12,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
-  const textareaRef = useRef();
-
   //Animation
   const[animationParent] = useAutoAnimate();
   
@@ -30,8 +28,6 @@ export default function Home() {
       toast.error("You need to ask something!", {
         position: toast.POSITION.TOP_RIGHT
       });
-
-      textareaRef.current.focus();
 
       return false;
     }
@@ -67,7 +63,7 @@ export default function Home() {
       </header>
 
       <div className="flex justify-center items-center">
-        <textarea ref={textareaRef} value={promptMessage} onChange={(e) => setPromptMessage(e.target.value)} placeholder={defaultMessage} className="mt-5 rounded border border-zinc-950 text-sm p-3 resize-none" cols={60} rows={5}></textarea>
+        <textarea value={promptMessage} onChange={(e) => setPromptMessage(e.target.value)} placeholder={defaultMessage} className="mt-5 rounded border border-zinc-950 text-sm p-3 resize-none" cols={60} rows={5}></textarea>
       </div>
     
       <div className="flex justify-center items-center">
