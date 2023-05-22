@@ -14,4 +14,7 @@ pnpm dev
 
 Usage Video:
 
-https://raw.githubusercontent.com/muffinweb/ChatAI/main/guides/sample.mov
+
+
+https://github.com/muffinweb/ChatAI/assets/36825498/93650f81-7152-46b7-b800-4b784f003946
+
