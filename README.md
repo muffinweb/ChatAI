@@ -12,4 +12,5 @@ yarn dev
 pnpm dev
 ```
 
-https://github.com/muffinweb/ChatAI/raw/main/guides/sample.mov
+## Usage Video
+https://raw.githubusercontent.com/muffinweb/ChatAI/main/guides/sample.mov
