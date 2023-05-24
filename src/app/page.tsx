@@ -80,7 +80,7 @@ export default function Home() {
 
       <div ref={animationParent}>
       {aiResponse.length > 0 && (<div className="flex justify-center items-center">
-        <div className="w-[492px] mt-20 px-10 py-3 bg-green-200 max-h-96 overflow-scroll">
+        <div className="w-[492px] mt-20 px-10 py-3 bg-green-200 max-h-96 overflow-auto">
         <p className="text-center text-sm">
           {aiResponse}
         </p>
