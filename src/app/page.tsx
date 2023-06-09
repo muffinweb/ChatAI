@@ -44,7 +44,9 @@ export default function Home() {
         resolve(true);
       }, 2000)
     })
-    const aiResponse = await axios.get(`https://jsonplaceholder.typicode.com/posts/${randomNum}`).then((r) => r);
+    const aiResponse = await axios.post('/askai', {
+      question: promptMessage
+    }).then( (r) => r );
     
     setSendingStatus(false);
 
