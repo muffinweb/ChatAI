@@ -11,12 +11,10 @@ export async function POST(req: NextRequest, res: NextResponse){
     });
     
     const openai = new OpenAIApi(configuration);
-    
-    const reqData = await req.json();
 
     const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: reqData.question,
+        prompt: "Can you type poetry?",
         temperature: 0.7,
         max_tokens: 256,
         top_p: 1,
