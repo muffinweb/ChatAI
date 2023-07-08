@@ -17,7 +17,7 @@ export default function Home() {
   
   const defaultMessage = "Ask something or type whatever you want.."
 
-  const[aiResponse, setAiResponse] = useState("");
+  const[aiResponse, setAiResponse] = useState([]);
   const[promptMessage, setPromptMessage] = useState("");
   const[sendingStatus, setSendingStatus] = useState(false);
 
@@ -33,7 +33,7 @@ export default function Home() {
     }
 
     //Set AI response empty string
-    setAiResponse("");
+    setAiResponse([]);
 
     // Set Sending status true
     setSendingStatus(true);
@@ -81,7 +81,7 @@ export default function Home() {
 
 
       <div ref={animationParent}>
-      {aiResponse.length > 0 && (<div className="flex justify-center items-center">
+      {aiResponse?.length > 0 && (<div className="flex justify-center items-center">
         <div className="w-[492px] mt-20 px-10 py-3 bg-green-200 max-h-96 overflow-auto">
         <p className="text-center text-sm">
           {aiResponse}

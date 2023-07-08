@@ -3,7 +3,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 export async function POST(req: NextRequest, res: NextResponse){
 
-    const apiKey = "pk-wYlFAAQJIAwksekIwooAAlfETTfbEYwzEhXcibIxQgVnLPID"
+    const apiKey = "pk-wYlFAAQJIAwksekIwooAAlfETTfbEYwzEhXcibIxQgVnLPID";
 
     const configuration = new Configuration({
         apiKey: apiKey,
@@ -31,10 +31,13 @@ export async function POST(req: NextRequest, res: NextResponse){
         return NextResponse.json({
             body: response.data.choices[0].text
         })
-    } catch(error){
+    } catch(error:any){
         console.log(error);
+
+        let errorMessage = error.error;
+
         return NextResponse.json({
-            body: "API Request ended with ERROR"
+            body: "AI response couldn't be fetched!"
         })
     }
 
